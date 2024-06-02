@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Formulário de Pesquisa de Satisfação</title>
+</head>
+<body>
+
+<h2>Formulário de Pesquisa de Satisfação</h2>
+
+<form action="/submit-form" method="post">
+
+    <fieldset>
+        <legend>Dados pessoais:</legend>
+        Nome: <input type="text" name="nome" required><br>
+        E-mail: <input type="email" name="email" required><br>
+        Telefone: <input type="tel" name="telefone" required><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Pesquisa:</legend>
+        <p>1. Como você avalia o nosso atendimento?</p>
+        <input type="radio" id="otimo" name="atendimento" value="otimo">
+        <label for="otimo">Ótimo</label><br>
+        <input type="radio" id="bom" name="atendimento" value="bom">
+        <label for="bom">Bom</label><br>
+        <input type="radio" id="regular" name="atendimento" value="regular">
+        <label for="regular">Regular</label><br>
+        <input type="radio" id="ruim" name="atendimento" value="ruim">
+        <label for="ruim">Ruim</label><br>
+
+        <p>2. Você recomendaria nossos serviços a amigos e familiares?</p>
+        <input type="radio" id="sim" name="recomenda" value="sim">
+        <label for="sim">Sim</label><br>
+        <input type="radio" id="nao" name="recomenda" value="nao">
+        <label for="nao">Não</label><br>
+
+        <p>3. Qual o principal motivo da sua avaliação?</p>
+        <select name="motivo" required>
+            <option value="atendimento">Atendimento</option>
+            <option value="preco">Preço</option>
+            <option value="qualidade">Qualidade do produto/serviço</option>
+            <option value="outro">Outro</option>
+        </select><br>
+    </fieldset>
+
+    <input type="checkbox" id="autoriza" name="autoriza" value="sim">
+    <label for="autoriza">Autorizo compartilhar minhas respostas com terceiros.</label><br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+</body>
+</html>
